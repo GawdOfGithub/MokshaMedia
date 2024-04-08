@@ -21,11 +21,11 @@ export default function Home() {
       <Features />
       <Video />
       <Brands />
-      <AboutSectionOne />
+      {/* <AboutSectionOne /> */}
       <AboutSectionTwo />
       <Testimonials />
       <Pricing />
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
       <Team />
     </>
