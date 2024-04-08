@@ -15,29 +15,23 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Elevate your brand with Zeofinix today.
+                Tapas Media
                 </h1>
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                Fuel Your Brand's Success with Expert Content Creation.
-
-At Zeofinix, we specialize in crafting captivating content that resonates and converts. From stunning visuals to compelling copy, our team is dedicated to bringing your vision to life.
-
-
-
-Whether you're a brand seeking to stand out or an influencer ready to amplify your voice, our team of seasoned creatives is here to bring your vision to life. Let's collaborate and create something extraordinary together.
+                Partner with Tapas to end all your content troubles
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="https://nextjstemplates.com/templates/Startup"
                     className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Download Now
+                   Yes,End them
                   </Link>
                   <Link
                     href="https://github.com/NextJSTemplates/Startup-nextjs"
                     className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
                   >
-                    Star on GitHub
+                    End them now
                   </Link>
                 </div>
               </div>

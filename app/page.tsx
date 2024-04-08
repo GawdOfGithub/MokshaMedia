@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Inter } from "@next/font/google";
 import Team from "@/components/Team";
+import End from "./end/page";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,12 +23,13 @@ export default function Home() {
       <Video />
       <Brands />
       {/* <AboutSectionOne /> */}
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
       <Testimonials />
       <Pricing />
       {/* <Blog /> */}
       <Contact />
       <Team />
+      <End/>
     </>
   );
 }
