@@ -9,8 +9,13 @@ const Blog = () => {
         
         pageName="Meet"
         description="Chose your preferred method if getting in touch"
+        
     
       />
+      <section>
+        hello
+      </section>
+      
 
     </>
   );
