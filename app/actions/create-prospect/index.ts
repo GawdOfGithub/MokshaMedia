@@ -4,18 +4,20 @@ import { revalidatePath } from "next/cache";
 
 import { db } from "@/lib/db";
 import { createSafeAction } from "@/lib/create-safeAction";
-
-import { CreateTodo } from "./schema";
+import { CreateProspects } from "./schema";
 import { InputType, ReturnType } from "./types";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
 
-  const { title } = data
-  let todo 
+  const { name,email,message } = data
+  console.log(data);
+  let prospect
   try{
-    todo = await db.todo.create({
+    prospect = await db.prospects.create({
       data:{
-        title
+        name,
+        email,
+        message
       }
     })
     revalidatePath("/")
@@ -26,10 +28,10 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   {
     console.log(error);
   }
-  return {data:todo}
+  return {data:prospect}
 }
 
-export const createTodo = createSafeAction(CreateTodo, handler);
+export const createProspects = createSafeAction(CreateProspects, handler);
 
 
 

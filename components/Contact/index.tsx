@@ -1,6 +1,35 @@
+"use client"
+import { createProspects } from "@/app/actions/create-prospect";
 import NewsLatterBox from "./NewsLatterBox";
-
+import { useAction } from "./hooks/use-action";
+import { FormSubmit } from "@/components/form/form-submit";
 const Contact = () => {
+  const { execute, fieldErrors } = useAction(createProspects, {
+    onSuccess: (data) => {
+     console.log(data);
+    },
+    onError: (error) => {
+    alert(error)
+    },
+  });
+  const onSubmit = (formData: FormData) => {
+  // Prevent default form submission behavior
+
+ // Get form data
+
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+    // console.log(name,email,message);
+    
+
+    execute({
+      name,
+      email,
+      message,
+    });
+    
+  };
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,7 +46,10 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form>
+              <form action= {onSubmit}
+                      
+         
+        >
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -28,6 +60,9 @@ const Contact = () => {
                         Your Name
                       </label>
                       <input
+                      id="name"
+                      name="name"
+                      
                         type="text"
                         placeholder="Enter your name"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -43,6 +78,8 @@ const Contact = () => {
                         Your Email
                       </label>
                       <input
+                       id="email"
+                       name="email"
                         type="email"
                         placeholder="Enter your email"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -59,6 +96,7 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
+                        id="message"
                         rows={5}
                         placeholder="Enter your Message"
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -66,7 +104,8 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
+                    
+                    <button className=" rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
                       Submit 
                     </button>
                   </div>

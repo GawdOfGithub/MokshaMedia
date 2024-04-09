@@ -12,6 +12,7 @@ import Video from "@/components/Video";
 import { Inter } from "@next/font/google";
 import Team from "@/components/Team";
 import End from "./end/page";
+import Hiring from "./hiring/page";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <Contact />
       <Team />
       <End/>
+      <Hiring/>
     </>
   );
 }

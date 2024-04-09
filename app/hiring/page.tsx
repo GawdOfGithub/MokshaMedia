@@ -1,13 +1,200 @@
-import React from 'react'
-import Breadcrumb from '@/components/Common/Breadcrumb'
-export default function page() {
-  return (
-    <Breadcrumb
-        
-   
-    description="How would you like to get into contact?"
-    
+"use client"
+import React, { useState } from 'react';
 
-  />
-  )
-}
+const Hiring = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    contactNumber: '',
+    portfolioLink: '',
+    videoEditingExperience: '',
+    editingSoftware: '',
+    additionalSkills: '',
+    bestWorkLink: ''
+  });
+
+  // const { execute, fieldErrors } = useAction(createProspects, {
+  //   onSuccess: (data) => {
+  //     console.log(data);
+  //   },
+  //   onError: (error) => {
+  //     alert(error);
+  //   },
+  // });
+
+  const onSubmit = (e) => {
+   alert("hello world")
+   };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+      <div className="container">
+        <div className="-mx-4 flex flex-wrap">
+          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+            <div className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]" data-wow-delay=".15s">
+              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                How would you like to communicate with us?
+              </h2>
+              <p className="mb-12 text-base font-medium text-body-color">
+                Our support team will get back to you ASAP via email.
+              </p>
+              <form onSubmit={onSubmit}>
+                <div className="-mx-4 flex flex-wrap">
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="name" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Your Name
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="email" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Your Email
+                      </label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="contactNumber" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Contact Number
+                      </label>
+                      <input
+                        id="contactNumber"
+                        name="contactNumber"
+                        type="text"
+                        placeholder="Enter your contact number"
+                        value={formData.contactNumber}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="portfolioLink" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Portfolio Link
+                      </label>
+                      <input
+                        id="portfolioLink"
+                        name="portfolioLink"
+                        type="text"
+                        placeholder="Enter your portfolio link"
+                        value={formData.portfolioLink}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="videoEditingExperience" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Years of Video Editing Experience
+                      </label>
+                      <input
+                        id="videoEditingExperience"
+                        name="videoEditingExperience"
+                        type="text"
+                        placeholder="Enter your years of experience"
+                        value={formData.videoEditingExperience}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="editingSoftware" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Proficient Editing Software
+                      </label>
+                      <select
+                        id="editingSoftware"
+                        name="editingSoftware"
+                        value={formData.editingSoftware}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      >
+                        <option value="">Select Editing Software</option>
+                        <option value="Adobe Premiere Pro">Adobe Premiere Pro</option>
+                        <option value="DaVinci Resolve">DaVinci Resolve</option>
+                        <option value="Adobe After Effects">Adobe After Effects</option>
+                        <option value="Other">Any Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="w-full px-4">
+                    <div className="mb-8">
+                      <label htmlFor="additionalSkills" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Additional Skills or Experiences
+                      </label>
+                      <textarea
+                        id="additionalSkills"
+                        name="additionalSkills"
+                        rows={5}
+                        placeholder="Enter additional skills or experiences"
+                        value={formData.additionalSkills}
+                        onChange={handleChange}
+                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div className="w-full px-4">
+                    <div className="mb-8">
+                      <label htmlFor="bestWorkLink" className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        Link to Your Best Work
+                      </label>
+                      <input
+                        id="bestWorkLink"
+                        name="bestWorkLink"
+                        type="text"
+                        placeholder="Enter link to your best work"
+                        value={formData.bestWorkLink}
+                        onChange={handleChange}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4">
+                    <button type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+           
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+export default Hiring

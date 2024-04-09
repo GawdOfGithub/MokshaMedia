@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Calendar } from "@/components/ui/Calendar";
 import { useState } from "react";
 import Contact from "@/components/Contact";
-const Blog = () => {
+const End = () => {
     const [date, setDate] = useState<Date | undefined>(new Date())
     
   return (
@@ -52,4 +52,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default End;
