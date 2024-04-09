@@ -4,8 +4,8 @@ const Breadcrumb = ({
   pageName,
   description,
 }: {
-  pageName: string;
-  description: string;
+  pageName?: string;
+  description?: string;
 }) => {
   return (
     <>
@@ -25,7 +25,7 @@ const Breadcrumb = ({
             <div className="w-full px-4 md:w-4/12 lg:w-5/12">
               <div className="text-end">
                 <ul className="flex items-center md:justify-end">
-                  <li className="flex items-center">
+                  {/* <li className="flex items-center">
                     <Link
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
@@ -33,7 +33,7 @@ const Breadcrumb = ({
                       Home
                     </Link>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-t-2 border-r-2 border-body-color"></span>
-                  </li>
+                  </li> */}
                   <li className="text-base font-medium text-primary">
                     {pageName}
                   </li>
