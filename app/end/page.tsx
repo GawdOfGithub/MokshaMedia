@@ -1,55 +1,77 @@
-"use client"
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tab"
-import { Button } from "@/components/ui/Button";
-import { Calendar } from "@/components/ui/Calendar";
-import { useState } from "react";
-import Contact from "@/components/Contact";
-const End = () => {
-    const [date, setDate] = useState<Date | undefined>(new Date())
-    
+"use client";
+
+import Image from "next/image";
+import { Tabs } from "@/components/ui/Tab";
+
+export default function End() {
+  const tabs = [
+    {
+      title: "Product",
+      value: "product",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Product Tab</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Services",
+      value: "services",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Services tab</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Playground",
+      value: "playground",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Playground tab</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Content",
+      value: "content",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Content tab</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Random",
+      value: "random",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Random tab</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+  ];
+
   return (
-    <>
-      <Breadcrumb
-        
-        pageName="Select"
-        description="How would you like to get into contact?"
-        
-    
-      />
-<Tabs defaultValue="account" className="w-[400px]">
-  <TabsList>
-    
-   
-    <div className="ml-[50px] mt-[40px] mb-[30px]">
-    <TabsTrigger value="account">
-      <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear mr-[10px]">
-     Call
-      </button>
-      </TabsTrigger>
-
-      <TabsTrigger value="Others">
-      <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
-    Others
-      </button>
-      </TabsTrigger>
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40 z-50 ">
+      <Tabs tabs={tabs} />
     </div>
-  </TabsList>
-  <TabsContent value="account">  <Calendar
-      mode="single"
-      selected={date}
-      onSelect={setDate}
-      className="rounded-md border"
-    /></TabsContent>
-  <TabsContent value="Others"><Contact/></TabsContent>
-</Tabs>
+  );
+}
 
-      
-
-    </>
+const DummyContent = () => {
+  return (
+    <Image
+      src="/linear.webp"
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
   );
 };
-
-export default End;
