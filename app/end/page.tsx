@@ -1,17 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { Tabs } from "@/components/ui/Tab";
-
+import { Tabs } from "@/components/ui/tabs";
+import Breadcrumb from "@/components/Common/Breadcrumb";
+import Contact from "@/components/Contact";
 export default function End() {
+  <Breadcrumb
+        
+  pageName="Select"
+  description="How would you like to get into contact?"
+  
+
+/>
   const tabs = [
     {
       title: "Product",
       value: "product",
+
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 z-50">
           <p>Product Tab</p>
-          <DummyContent />
+          <Contact />
         </div>
       ),
     },
@@ -58,7 +67,7 @@ export default function End() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40 z-50 ">
+    <div className="h-[70rem] md:h-[60rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40 z-50 ">
       <Tabs tabs={tabs} />
     </div>
   );
@@ -67,10 +76,10 @@ export default function End() {
 const DummyContent = () => {
   return (
     <Image
-      src="/linear.webp"
+      src="/next.svg"
       alt="dummy image"
-      width="1000"
-      height="1000"
+      width="100"
+      height="100"
       className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
     />
   );
