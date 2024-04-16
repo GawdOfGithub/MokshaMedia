@@ -21,9 +21,7 @@ model Editor {
   folioLink  String 
   experience  String
   editingSoftware  String
-  motivation String
+  additionalSkills String
   bestworkLink String
-
-
 
 }

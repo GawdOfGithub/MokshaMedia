@@ -3,7 +3,10 @@ import { createProspects } from "@/app/actions/create-prospect";
 import NewsLatterBox from "./NewsLatterBox";
 import { useAction } from "./hooks/use-action";
 import { FormSubmit } from "@/components/form/form-submit";
+import { useState } from "react";
 const Contact = () => {
+
+  
   const { execute, fieldErrors } = useAction(createProspects, {
     onSuccess: (data) => {
      console.log(data);
@@ -13,16 +16,9 @@ const Contact = () => {
     },
   });
   const onSubmit = (formData: FormData) => {
-  // Prevent default form submission behavior
-
- // Get form data
-
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const message = formData.get("message") as string;
-    // console.log(name,email,message);
-    
-
     execute({
       name,
       email,
