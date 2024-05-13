@@ -42,7 +42,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form action= {onSubmit}
+              <form action={onSubmit as unknown as string}
                       
          
         >
