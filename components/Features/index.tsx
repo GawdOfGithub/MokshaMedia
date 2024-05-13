@@ -9,10 +9,10 @@ const Features = () => {
         id="features"
         className="bg-primary/[.03] py-16 md:py-20 lg:py-28"
       >
-        <div className="">
+        <div className="mr-[17px]">
           <SectionTitle
             title="Why creators love TAPAS?"
-            paragraph="In short our creators loves us because we love them back"
+            paragraph="Creators loves us because we love them back"
             center
           />
 

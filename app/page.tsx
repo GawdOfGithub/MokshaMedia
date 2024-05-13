@@ -1,6 +1,5 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
@@ -13,6 +12,7 @@ import { Inter } from "@next/font/google";
 import Team from "@/components/Team";
 import End from "./end/page";
 import Hiring from "./hiring/page";
+import Blog from "./blog/page";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -21,17 +21,18 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
-      <Brands />
+      {/* <Video /> */}
+      {/* <Brands /> */}
       {/* <AboutSectionOne /> */}
       {/* <AboutSectionTwo /> */}
+      <Blog/>
       <Testimonials />
       <Pricing />
       {/* <Blog /> */}
-      <Contact />
-      <Team />
-      <End/>
-      <Hiring/>
+      {/* <Contact /> */}
+      {/* <Team /> */}
+      {/* <End/> */}
+      {/* <Hiring/> */}
     </>
   );
 }
