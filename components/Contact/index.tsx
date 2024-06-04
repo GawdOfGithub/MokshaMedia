@@ -4,15 +4,28 @@ import NewsLatterBox from "./NewsLatterBox";
 import { useAction } from "./hooks/use-action";
 // import { FormSubmit } from "@/components/form/form-submit";
 import { useState } from "react";
+import SubmitButton from "../SubmitButton";
+import { useToast } from "../ui/toaster/use-toast";
 const Contact = () => {
+  const {toast} = useToast()
 
   
   const { execute, fieldErrors } = useAction(createProspects, {
     onSuccess: (data) => {
-     console.log(data);
+      toast({
+            
+        title: "Your data reached our server",
+        description: "We will be contacting you as soon as possible",
+        
+      })
     },
     onError: (error) => {
-    alert(error)
+  toast({
+            
+        title: "Something went wrong while submitting your data",
+      
+        
+      })
     },
   });
   const onSubmit = (formData: FormData) => {
@@ -101,9 +114,9 @@ const Contact = () => {
                   </div>
                   <div className="w-full px-4">
                     
-                    <button className=" rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
+                    <SubmitButton className=" rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
                       Submit 
-                    </button>
+                    </SubmitButton>
                   </div>
                 </div>
               </form>

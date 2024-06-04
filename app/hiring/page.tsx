@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import { CreateEditor } from "@/app/actions/create-editor/schema";
 import { useAction } from '@/components/Contact/hooks/use-action';
 import { createEditor } from '../actions/create-editor';
+import SubmitButton from '@/components/SubmitButton';
+import { useToast } from '@/components/ui/toaster/use-toast';
 const Hiring = () => {
+  const {toast} = useToast()
   const handleSelectChange = (event) => {
     setEditingSoftware(event.target.value); 
   };
@@ -12,10 +15,20 @@ const Hiring = () => {
   
   const { execute, fieldErrors } = useAction(createEditor, {
     onSuccess: (data) => {
-      console.log(data);
+      toast({
+            
+        title: "Your data reached our server",
+        description: "We will be contacting you as soon as possible",
+        
+      })
     },
     onError: (error) => {
-      alert(error);
+      toast({
+            
+        title: "Something went wrong while submitting your data",
+  
+        
+      })
     },
   });
   const onSubmit = (formData: FormData) => {
@@ -189,9 +202,9 @@ const Hiring = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
+                    <SubmitButton className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp ml-24">
                       Submit
-                    </button>
+                    </SubmitButton>
                   </div>
                 </div>
               </form>

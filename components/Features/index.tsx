@@ -11,8 +11,8 @@ const Features = () => {
       >
         <div className="mr-[17px]">
           <SectionTitle
-            title="Why creators love TAPAS?"
-            paragraph="Creators loves us because we love them back"
+            title="Why choose TAPAS?"
+            paragraph="At Tapas we have a proven track record of building brands"
             center
           />
 

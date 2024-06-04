@@ -13,15 +13,15 @@ model Prospects {
   email   String
   message String
 }
+
 model Editor {
-  id      String @id @default(uuid())
-  name    String
-  email   String
-  number  String
-  folioLink  String 
-  experience  String
+  id               String @id @default(uuid())
+  name             String
+  email            String
+  number           String
+  folioLink        String
+  experience       String
   editingSoftware  String
   additionalSkills String
-  bestworkLink String
-
+  bestworkLink     String
 }

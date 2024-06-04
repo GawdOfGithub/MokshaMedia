@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Crafted for Creators",
     paragraph:
-      "We at Tapas have  one and only one dream that is to fullfil your dreams.",
+      "Using our experience we at Tapas will create strategies specially tailored to your needs.",
   },
   {
     id: 1,
