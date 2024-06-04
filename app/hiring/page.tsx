@@ -23,12 +23,13 @@ const Hiring = () => {
       })
     },
     onError: (error) => {
-      toast({
+      // toast({
             
-        title: "Something went wrong while submitting your data",
+      //   title: "Something went wrong while submitting your data",
   
         
-      })
+      // })p
+      console.log(error);
     },
   });
   const onSubmit = (formData: FormData) => {
