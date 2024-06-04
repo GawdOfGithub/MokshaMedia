@@ -22,7 +22,7 @@ const End = () => {
     
       />
       
-<Tabs defaultValue="account" className="w-[400px] ml-0">
+<Tabs defaultValue="account" className="w-[400px] ml-0 sm:w-screen">
   <TabsList>
     
    
@@ -41,7 +41,7 @@ const End = () => {
     </div>
   </TabsList>
   <TabsContent value="account"> <Icons/> </TabsContent>
-  <TabsContent value="Others"><Contact/></TabsContent>
+  <TabsContent value="Others" className=""><Contact/></TabsContent>
 </Tabs>
 
       

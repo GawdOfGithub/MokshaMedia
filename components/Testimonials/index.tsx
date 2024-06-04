@@ -5,29 +5,29 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Prakhar Bhatt",
+    designation: "Founder @Vedology",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
+      "Tapas Media was the sole reason of Vedology's growth from 50k to 100K subscribers in just a span of 6 months. I highly recommend Tapas Media",
+    image: "/t1.jpeg",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Brian Kouhi",
+    designation: "Co-Founder at TOAnimate",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
+      "The videos edited by Tapas Media were upto the mark. I highly recommend Tapas Media.",
+    image: "/t2.jpeg",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Concept Talks",
+    designation: "Founder @Concept Talks",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
+      "Our team at Concept Talks is so impressed with Tapas Media , the strategies created by Tapas Media played a crucial role in our growth. ",
+    image: "/t3.png",
     star: 5,
   },
 ];

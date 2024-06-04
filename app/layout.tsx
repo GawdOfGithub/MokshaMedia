@@ -22,6 +22,7 @@ export default function RootLayout({
       <body className="dark:bg-black">
         <Toaster/>
         <Providers>
+          
           <Header />
           {children}
           <Footer />

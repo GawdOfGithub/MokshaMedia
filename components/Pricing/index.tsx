@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="A small investment to unlock your potential"
+          paragraph="The prices of pay is just a fraction of the value you will unlock by working with TAPAS"
           center
           width="665px"
         />
@@ -62,43 +62,52 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Podcast Editing Package"
+            price={isMonthly ? "400" : "4500"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Ideal for podcasters seeking professional editing"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+           
+
+
+
+
+            <OfferList text=" Audio Cleanup & Enhancement" status="active" />
+            <OfferList text="Noise Reduction & Equalization" status="active" />
+            <OfferList text="Intro & Outro Music Integration" status="active" />
+            <OfferList text="Basic Sound Effects Addition" status="active" />
+            <OfferList text="Up to 4 Episodes per Month" status="active" />
+            <OfferList text="Social Media Shorts Creation (up to 3 per episode)" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Influence Elite"
+            price={isMonthly ? "500" : "5500"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Perfect for influencers who need high-quality editing to enhance their personal brand and engage their audience."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+             <OfferList text=" Professional Video Editing for Up to 8 Videos per Month" status="active" />
+            
+            <OfferList text="Advanced Transitions & Effects for a Polished Look
+" status="active" />
+            <OfferList text="Custom Thumbnail Creation for Each Video" status="active" />
+            <OfferList text="Motion Graphics and Text Overlays to Highlight Key Points
+" status="active" />
+            <OfferList text="Social Media Clips Creation (up to 5 per video) for Various Platforms" status="active" />
+           
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName=" Faceless Brand"
+            price={isMonthly ? "600" : "6600"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas endim."
+            subtitle=" Tailored for creators focusing on high-quality, engaging faceless content."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+ <OfferList text="Detailed Stratergy for faceless brand creation" status="active" />
+            <OfferList text="Script Assistance & Storyboarding" status="active" />
+            <OfferList text="Professional Voiceover Integration (provided by client)/AI" status="active" />
+            <OfferList text="Up to 6 Faceless Videos per Month" status="active" />
+           
+            <OfferList text="Social Media Clips Creation (up to 5 per video)" status="active" />
+            <OfferList text="Subtitle & Closed Captioning" status="active" />
           </PricingBox>
         </div>
       </div>

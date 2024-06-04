@@ -6,8 +6,8 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Our Work"
-        description="Some of the work that we have delivered to our clients"
+        pageName=""
+        description="Discover our masterpiece"
       />
 
       <section className="pt-[120px] pb-[120px]">
