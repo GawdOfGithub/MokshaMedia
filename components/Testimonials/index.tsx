@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Prakhar Bhatt",
     designation: "Founder @Vedology",
     content:
-      "Tapas Media was the sole reason of Vedology's growth from 50k to 100K subscribers in just a span of 6 months. I highly recommend Tapas Media",
+      "Tapas Media lead by Arjun Om played a key role in growing Vedology to 100 K subscribers in just a span of 4 months. I highly recommend Tapas Media",
     image: "/t1.jpeg",
     star: 5,
   },

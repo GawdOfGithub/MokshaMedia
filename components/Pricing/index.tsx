@@ -3,7 +3,7 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
-
+import Link from "next/link";
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
@@ -62,7 +62,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Podcast Editing Package"
+            packageName="Podcast Package"
             price={isMonthly ? "400" : "4500"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Ideal for podcasters seeking professional editing"
