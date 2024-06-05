@@ -29,6 +29,7 @@ const testimonialData: Testimonial[] = [
       "Our team at Concept Talks is so impressed with Tapas Media , the strategies created by Tapas Media played a crucial role in our growth. ",
     image: "/t3.png",
     star: 5,
+  
   },
 ];
 
